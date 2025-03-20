@@ -11,17 +11,19 @@ export function Footer() {
           <Typography
             className="text-2xl md:text-3xl text-center font-bold "
             color="white"
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           >
             Join now and get 30% OFF!
           </Typography>
           <Typography
             color="white"
             className=" md:w-7/12 text-center my-3 !text-base"
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           >
             Don&apos;t miss out on this exclusive offer that will end soon.
           </Typography>
           <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
-            <Button color="white" size="md">
+            <Button color="white" size="md" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               buy ticket
             </Button>
           </div>
@@ -33,6 +35,7 @@ export function Footer() {
             target="_blank"
             variant="h6"
             className="text-gray-900"
+            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
           >
             Material Tailwind
           </Typography>
@@ -45,6 +48,7 @@ export function Footer() {
                   variant="small"
                   color="white"
                   className="font-normal !text-gray-700 hover:!text-gray-900 transition-colors"
+                  placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
                 >
                   {link}
                 </Typography>
@@ -52,16 +56,16 @@ export function Footer() {
             ))}
           </ul>
           <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton size="sm" color="gray" variant="text" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <i className="fa-brands fa-twitter text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton size="sm" color="gray" variant="text" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <i className="fa-brands fa-youtube text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton size="sm" color="gray" variant="text" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton size="sm" color="gray" variant="text" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
               <i className="fa-brands fa-github text-lg" />
             </IconButton>
           </div>
@@ -69,6 +73,7 @@ export function Footer() {
         <Typography
           color="blue-gray"
           className="text-center mt-12 font-normal !text-gray-700"
+          placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
         >
           &copy; {CURRENT_YEAR} Made with{" "}
           <a href="https://www.material-tailwind.com" target="_blank">
