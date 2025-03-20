@@ -14,7 +14,7 @@ function Hero() {
         poster="" 
         className="h-full w-full object-center object-cover absolute hidden lg:block"
       >
-        <source src="../../public/media/maison.webm" type="video/webm" />
+        <source src="/media/maison.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <video 
@@ -25,7 +25,7 @@ function Hero() {
         poster="" 
         className="h-full w-full object-center object-cover absolute block lg:hidden"
       >
-        <source src="../../public/media/maison_phone.webm" type="video/webm" />
+        <source src="/media/maison_phone.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
