@@ -25,7 +25,7 @@ export function SponsoredBy() {
               width={256}
               height={256}
               key={key}
-              src={`/logos/logo-${logo}.svg`}
+              src={`logos/logo-${logo}.svg`}
               alt={logo}
               className="w-40"
             />
