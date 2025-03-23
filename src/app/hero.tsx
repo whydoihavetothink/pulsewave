@@ -11,10 +11,13 @@ function Hero() {
         loop 
         muted 
         playsInline 
+        preload="auto"
         poster="" 
         className="h-full w-full object-center object-cover absolute hidden lg:block"
       >
         <source src="media/maison.webm" type="video/webm" />
+        <source src="media/maison.mp4" type="video/mp4" />
+
         Your browser does not support the video tag.
       </video>
       <video 
@@ -22,9 +25,11 @@ function Hero() {
         loop 
         muted 
         playsInline 
+        preload="auto"
         poster="" 
         className="h-full w-full object-center object-cover absolute block lg:hidden"
       >
+        <source src="media/maison-phone.mp4" type="video/mp4" />
         <source src="media/maison-phone.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
