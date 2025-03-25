@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
+import { useTranslations } from "next-intl";
 
 const SPONSORS = [
   "coinbase",
@@ -13,11 +14,13 @@ const SPONSORS = [
 ];
 
 export function SponsoredBy() {
+  const t = useTranslations("Navbar");
+
   return (
     <section className="py-8 px-8 lg:py-20">
       <div id="info" className="container mx-auto text-center">
         <Typography variant="h6" color="blue-gray" className="mb-8" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-          PARTNERS
+          {t("partners").toUpperCase()}
         </Typography>
         <div className="flex flex-wrap items-center justify-center gap-6">
           {SPONSORS.map((logo, key) => (

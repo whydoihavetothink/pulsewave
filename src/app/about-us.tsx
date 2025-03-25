@@ -2,6 +2,7 @@
 
 import { Typography } from "@material-tailwind/react";
 import AboutCard from "../components/about-card";
+import { useTranslations } from "next-intl";
 
 const EVENT_INFO = [
   {
@@ -19,23 +20,46 @@ const EVENT_INFO = [
 ];
 
 export function AboutEvent() {
+  const t = useTranslations("About Us");
+
   return (
     <section className="container mx-auto flex flex-col items-center px-4 py-10">
-      <Typography variant="h6" className="text-center mb-2" color="orange" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        About Pulsewave
+      <Typography
+        variant="h6"
+        className="text-center mb-2"
+        color="orange"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
+        {t("title")}
       </Typography>
-      <Typography variant="h3" className="text-center" color="blue-gray" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        Why Us?
+      <Typography
+        variant="h3"
+        className="text-center"
+        color="blue-gray"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
+        {t("why us")}
       </Typography>
       <Typography
         variant="lead"
-        className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !text-gray-500" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Vivamus nisi enim, molestie vitae volutpat eu, congue ac ipsum.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Praesent blandit id arcu bibendum pulvinar. Vivamus a elit et augue dapibus pretium.
-        Suspendisse potenti. Aliquam aliquet non est in pharetra.
-        Phasellus libero ipsum, molestie vel vestibulum id, accumsan semper nisl.
+        className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
+        <div className="flex gap-6 flex-col items-center">
+          <p>{t("content.1")}</p>
+
+          <p>{t("content.2")}</p>
+
+          <p>{t("content.3")}</p>
+
+          <p>{t("content.4")}</p>
+        </div>
       </Typography>
       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {EVENT_INFO.map((props, idx) => (

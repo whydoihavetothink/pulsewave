@@ -1,0 +1,19 @@
+{
+  "Navbar": {
+    "partners": "Partneři",
+    "gallery": "Galerie",
+    "contact": "Kontakt",
+    "info": "Informace",
+    "tickets": "Lístky"
+  },
+  "About Us": {
+    "title": "O nás",
+    "why us": "Proč právě Pulsewave?",
+    "content": {
+      "1": "V Pulsewave se specializujeme na pořádání jedinečných událostí v některých z nejunikátnějších a nejneobvyklejších lokalit. Od dechberoucích párty na střechách až po elegantní oslavy na historických památkách, jako je Špilberk a Křižíkova Fontána, měníme ikonické prostory v nezapomenutelné zážitky.",
+      "2": "Pořádáme také výjimečné akce v některých z nejprestižnějších kulturních míst v Brně, včetně ohromující Moravské galerie, která zahrnuje UMPRUM a Místodržitelský palác. Tyto prostory poskytují sofistikované a umělecké pozadí pro každou událost. Další výjimečnou lokalitou je impozantní Villa Stiassni, mistrovské dílo modernistické architektury, ideální pro exkluzivní setkání.",
+      "3": "Ve spolupráci s Maison Club & Lounge, situovaným v srdci Brna, Pulsewave zajišťuje, že afterparty bude stejně nezapomenutelná a elegantně naváže na celou oslavu. Pro naše akce v Praze spolupracujeme s Casablanca Sky Bar, umístěným na střeše 5-hvězdičkového Hotelu President, kde afterparty získá nový rozměr díky úchvatnému výhledu na město.",
+      "4": "V Pulsewave nejsme jen organizátoři akcí – jsme tvůrci jedinečných zážitků. Nechte nás proměnit vaši událost v něco opravdu výjimečného."
+    }
+  }
+}
