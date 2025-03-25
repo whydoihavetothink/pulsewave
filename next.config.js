@@ -14,5 +14,5 @@ const nextConfig = {
   },
 };
 
-module.exports =  withNextIntl(nextConfig);;
+module.exports =  withNextIntl(nextConfig);
 
