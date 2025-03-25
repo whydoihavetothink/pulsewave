@@ -52,13 +52,13 @@ export function AboutEvent() {
         onPointerLeaveCapture={undefined}
       >
         <div className="flex gap-6 flex-col items-center">
-          <p>{t("content.1")}</p>
+          <div>{t("content.1")}</div>
 
-          <p>{t("content.2")}</p>
+          <div>{t("content.2")}</div>
 
-          <p>{t("content.3")}</p>
+          <div>{t("content.3")}</div>
 
-          <p>{t("content.4")}</p>
+          <div>{t("content.4")}</div>
         </div>
       </Typography>
       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
