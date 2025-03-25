@@ -44,23 +44,42 @@ export function AboutEvent() {
       >
         {t("why us")}
       </Typography>
-      <Typography
-        variant="lead"
-        className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        <div className="flex gap-6 flex-col items-center">
-          <div>{t("content.1")}</div>
-
-          <div>{t("content.2")}</div>
-
-          <div>{t("content.3")}</div>
-
-          <div>{t("content.4")}</div>
-        </div>
-      </Typography>
+        <Typography
+          variant="lead"
+          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
+          {t("content.1")}
+        </Typography>
+        <Typography
+          variant="lead"
+          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
+          {t("content.2")}
+        </Typography>
+        <Typography
+          variant="lead"
+          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
+          {t("content.3")}
+        </Typography>
+        <Typography
+          variant="lead"
+          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
+          {t("content.4")}
+        </Typography>
       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {EVENT_INFO.map((props, idx) => (
           <AboutCard key={idx} {...props} />
