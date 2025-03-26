@@ -52,7 +52,7 @@ function Hero() {
               height={1200}
               src="/media/Pulsewave-Logo-Transparent-BG-White-Shadow.png"
               alt="Pulsewave"
-              className="absolute w-auto h-full object-cover w-400"
+              className="absolute w-400 h-full object-cover"
             />
           </div>
 
