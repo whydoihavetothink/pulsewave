@@ -1,5 +1,3 @@
-export const dynamic = "force-static" // TODO: REMOVE THIS /ONLY FOR GITHUB/
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
