@@ -160,7 +160,7 @@ export function Navbar() {
             )}
           </IconButton>
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex align-middle justify-center">
         <LanguageSwitcher dark={isScrolling}/>
         </div>
       </div>
