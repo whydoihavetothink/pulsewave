@@ -36,16 +36,6 @@ function Hero() {
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
       <div className="grid min-h-screen px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
-          <Typography
-            variant="h3"
-            color="white"
-            className="mb-2"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-          >
-            @ New York 23 august 2022
-          </Typography>
           <div className="relative w-full h-48 overflow-hidden flex justify-center items-center">
             <Image
               width={1200}
@@ -55,17 +45,6 @@ function Hero() {
               className="absolute w-400 h-full object-cover"
             />
           </div>
-
-          <Typography
-            variant="lead"
-            color="white"
-            className="mt-1 mb-12 w-full md:max-w-full lg:max-w-2xl"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-          >
-            subtext
-          </Typography>
           <div className="flex items-center gap-4">
             <Button
               variant="gradient"
@@ -76,14 +55,6 @@ function Hero() {
             >
               Get started
             </Button>
-            <IconButton
-              className="rounded-full bg-white p-6"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-            >
-              <PlayIcon className="h-4 w-4 text-gray-900" />
-            </IconButton>
 
             <div id="partners"></div>
           </div>
