@@ -7,9 +7,6 @@ import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
-import {NextIntlClientProvider} from 'next-intl';
-import {getLocale} from 'next-intl/server';
-
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700", "900"],
@@ -29,15 +26,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{locale: string}>;
 }) {
-<<<<<<< HEAD:src/app/layout.tsx
-  const locale = await getLocale();
-=======
 
   const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
->>>>>>> 87c142b (static lang pages):src/app/[locale]/layout.tsx
 
   return (
     <html lang={locale}>
