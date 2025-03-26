@@ -132,7 +132,7 @@ export function Navbar() {
             ))}
           </ul>
           <div className="hidden items-center gap-4 lg:flex">
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
+            <a href="https://tickets.nfctron.com/event/noisemaniac-sro/play-or-die-argy/demo?secret=YTk3ZWU5MmQtZTVkYi00MThlLTg2OGItYzVlNjBlYzA1YzM0" target="_blank">
               <Button
                 color={isScrolling ? "gray" : "white"}
                 placeholder={undefined}
