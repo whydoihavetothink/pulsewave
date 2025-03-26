@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { locales, type Locale } from "@/i18n/config";
 import { IconWorld } from "@tabler/icons-react";
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import Link from "next/link";
