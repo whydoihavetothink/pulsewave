@@ -1,20 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { locales, type Locale } from "@/i18n/config";
 import { IconWorld } from "@tabler/icons-react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import Link from "next/link";
 
 interface LanguageSwitcherProps {
   dark?: boolean;
@@ -22,15 +15,6 @@ interface LanguageSwitcherProps {
 
 export const LanguageSwitcher = ({ dark = false }: LanguageSwitcherProps) => {
   const current_locale = useLocale() as Locale;
-  const router = useRouter();
-
-  function handleLocaleChange(value: string, days: number): void {
-    const expires = new Date();
-    expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-
-    document.cookie = `locale=${value};expires=${expires.toUTCString()};path=/`;
-    router.refresh(); // window.location.reload();
-  }
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -51,15 +35,16 @@ export const LanguageSwitcher = ({ dark = false }: LanguageSwitcherProps) => {
         <div className="border-t border-gray-200 my-1" />
 
         {locales.map((locale: string) => (
-          <button
-            key={locale}
-            className={`w-full text-left px-2 py-1 text-sm rounded hover:bg-gray-200 ${
-              locale === current_locale ? "font-semibold text-blue-500" : ""
-            }`}
-            onClick={() => handleLocaleChange(locale, 30)}
-          >
-            {locale.toUpperCase()}
-          </button>
+          <Link href={`/${locale}`} locale={locale} key={locale}>
+            <button
+              key={locale}
+              className={`w-full text-left px-2 py-1 text-sm rounded hover:bg-gray-200 ${
+                locale === current_locale ? "font-semibold text-blue-500" : ""
+              }`}
+            >
+              {locale.toUpperCase()}
+            </button>
+          </Link>
         ))}
       </PopoverContent>
     </Popover>

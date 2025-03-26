@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
-import AboutCard from "../components/about-card";
+import AboutCard from "../../components/about-card";
 import { useTranslations } from "next-intl";
 
 const EVENT_INFO = [
@@ -44,42 +44,18 @@ export function AboutEvent() {
       >
         {t("why us")}
       </Typography>
+      {[1,2,3,4].map((idx) => (
         <Typography
+          key={idx}
           variant="lead"
           className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
         >
-          {t("content.1")}
+          {t(`content.${idx}`)}
         </Typography>
-        <Typography
-          variant="lead"
-          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-        >
-          {t("content.2")}
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-        >
-          {t("content.3")}
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
-          placeholder={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-        >
-          {t("content.4")}
-        </Typography>
+      ))}
       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {EVENT_INFO.map((props, idx) => (
           <AboutCard key={idx} {...props} />
