@@ -4,12 +4,13 @@ import { Navbar, Footer } from "../../components";
 // sections
 import Hero from "./hero";
 import SponsoredBy from "./sponsored-by";
-import AboutEvent from "./about-us";
+import AboutUs from "./about-us";
 import OurStats from "./our-stats";
 import EventContent from "./event-content";
 import Faq from "./faq";
 import { TracingBeam } from "@/components/aceternity/tracing-beam";
 import { locales } from "@/i18n/config";
+import { AuroraBackground } from "@/components/aceternity/aurora-background";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -20,13 +21,16 @@ export default function Portfolio() {
     <>
     <Navbar />
     <Hero />
+    <AuroraBackground showRadialGradient >
+
     <TracingBeam>
       <SponsoredBy />
-      <AboutEvent />
+      <AboutUs />
       <OurStats />
       <EventContent />
       <Faq />
     </TracingBeam>
+    </AuroraBackground>
 
     </>
   );

@@ -6,6 +6,7 @@ import { Layout, FixedPlugin } from "../../components";
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import { BACKGROUND_COLOR } from "@/constants";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -42,7 +43,7 @@ export default async function RootLayout({
         ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-${BACKGROUND_COLOR}`}>
       <NextIntlClientProvider>
         <Layout>
           {children}

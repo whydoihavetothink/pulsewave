@@ -3,6 +3,7 @@
 import { Typography } from "@material-tailwind/react";
 import AboutCard from "../../components/about-card";
 import { useTranslations } from "next-intl";
+import { TEXT_COLOR } from "@/constants";
 
 const EVENT_INFO = [
   {
@@ -19,7 +20,7 @@ const EVENT_INFO = [
   },
 ];
 
-export function AboutEvent() {
+export function AboutUs() {
   const t = useTranslations("About Us");
 
   return (
@@ -37,7 +38,7 @@ export function AboutEvent() {
       <Typography
         variant="h3"
         className="text-center"
-        color="blue-gray"
+        color={TEXT_COLOR}
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
@@ -49,6 +50,7 @@ export function AboutEvent() {
           key={idx}
           variant="lead"
           className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+          color={TEXT_COLOR}
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
@@ -72,4 +74,4 @@ export function AboutEvent() {
   );
 }
 
-export default AboutEvent;
+export default AboutUs;

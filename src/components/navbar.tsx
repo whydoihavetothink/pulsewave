@@ -22,6 +22,7 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
+import { TICKETS_LINK } from "@/constants";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -29,7 +30,6 @@ interface NavItemProps {
   blank?: boolean;
 }
 
-const TICKETS_LINK = "https://tickets.nfctron.com/event/noisemaniac-sro/play-or-die-argy/demo?secret=YTk3ZWU5MmQtZTVkYi00MThlLTg2OGItYzVlNjBlYzA1YzM0";
 
 function NavItem({ children, href, blank }: NavItemProps) {
   return (
@@ -178,7 +178,7 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 flex items-center gap-4">
-            <a href={TICKETS_LINK}target="_blank">
+            <a href={TICKETS_LINK} target="_blank">
               <Button
                 color="gray"
                 placeholder={undefined}
