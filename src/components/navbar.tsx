@@ -19,7 +19,7 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
-import { TICKETS_LINK } from "@/constants";
+import { SECONDARY_COLOR_RAW, TICKETS_LINK } from "@/constants";
 import { h } from "framer-motion/dist/types.d-B50aGbjN";
 
 interface NavItemProps {
@@ -104,8 +104,8 @@ export function Navbar() {
       shadow={false}
       fullWidth
       blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
+      className={`fixed top-0 z-50 border-0`}
+      style={{background: isScrolling ? "white" : "transparent"}}
       placeholder={undefined}
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
@@ -162,7 +162,7 @@ export function Navbar() {
             )}
           </IconButton>
         </div>
-        <div className="hidden lg:flex align-middle justify-center">
+        <div className="hidden lg:flex align-middle justify-center mx-4">
         <LanguageSwitcher dark={isScrolling}/>
         </div>
       </div>

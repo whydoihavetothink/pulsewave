@@ -24,7 +24,7 @@ export function AboutUs() {
   const t = useTranslations("About Us");
 
   return (
-    <section className="container mx-auto flex flex-col items-center px-7 py-10">
+    <section id="info" className="container mx-auto flex flex-col items-center px-7 py-10">
       <Typography
         variant="h6"
         className="text-center mb-2"

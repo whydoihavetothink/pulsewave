@@ -10,7 +10,7 @@ function Hero() {
   const t = useTranslations("Navbar");
 
   return (
-    <div className="relative min-h-screen w-full bg-[url('/image/event.jpeg')] bg-cover bg-no-repeat">
+    <div className="relative min-h-screen w-full bg-[url('/media/Argy-banner-web.png')] bg-cover bg-no-repeat">
       <video
         autoPlay
         loop
@@ -69,7 +69,6 @@ function Hero() {
           >
             KRIZIKOVA FONTANA PRAGUE
           </Typography>
-          <div className="flex items-center gap-4">
             <a href={TICKETS_LINK} target="_blank">
               <Button
                 className={`font-bold text-lg`}
@@ -84,9 +83,6 @@ function Hero() {
                 {t("tickets")}
               </Button>
             </a>
-
-            <div id="partners"></div>
-          </div>
         </div>
       </div>
     </div>

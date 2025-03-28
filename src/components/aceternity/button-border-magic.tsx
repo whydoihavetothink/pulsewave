@@ -32,7 +32,7 @@ export const ButtonBorderMagic: React.FC<ButtonBorderMagicProps> = ({
       )}
     >
       <span
-        className={"absolute inset-[-1000%] animate-[spin_2s_linear_infinite]"}
+        className={"absolute inset-[-1000%] animate-[spin_4s_linear_infinite]"}
         style={{
           background: `conic-gradient(from 90deg at 50% 50%, ${primaryColor} 0%, ${secondaryColor} 50%, ${primaryColor} 100%)`,
         }}

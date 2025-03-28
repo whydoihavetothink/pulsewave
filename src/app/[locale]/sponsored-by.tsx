@@ -24,8 +24,8 @@ export function SponsoredBy() {
   const t = useTranslations("Navbar");
 
   return (
-    <section className="py-8 px-8 lg:py-20">
-      <div id="info" className="container mx-auto text-center">
+    <section id="partners" className="py-8 px-8 lg:py-20">
+      <div className="container mx-auto text-center">
         <Typography
           variant="h6"
           className={`mb-8 text-${SECONDARY_COLOR}`}
