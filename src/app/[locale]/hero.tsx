@@ -54,7 +54,7 @@ function Hero() {
             <Image
               width={1200}
               height={1200}
-              src="/media/Pulsewave-Logo-Transparent-BG-White-Shadow.png"
+              src="/media/Pulsewave-Logo-Transparent-BG.png"
               alt="Pulsewave"
               className="absolute w-400 h-full object-cover"
             />

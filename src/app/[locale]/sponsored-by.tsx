@@ -16,10 +16,8 @@ const SPONSORS = [
   "desperado",
   "ploom",
   "jagermaister",
-  "fxcg",
-  "casablanca",
   "hedin_automotive",
-  "kaufmann"
+  "casablanca",
 ];
 
 export function SponsoredBy() {
@@ -28,19 +26,30 @@ export function SponsoredBy() {
   return (
     <section className="py-8 px-8 lg:py-20">
       <div id="info" className="container mx-auto text-center">
-        <Typography variant="h6" className={`mb-8 text-${SECONDARY_COLOR}`} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <Typography
+          variant="h6"
+          className={`mb-8 text-${SECONDARY_COLOR}`}
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        >
           {t("partners").toUpperCase()}
         </Typography>
         <div className="flex flex-wrap items-center justify-center gap-6">
           {SPONSORS.map((sponsor, key) => (
-            <Image
-              width={256}
-              height={256}
-              key={key}
-              src={`/sponsors/${sponsor}/white.png`}
-              alt={sponsor}
-              className="w-40"
-            />
+            <div
+            className="flex justify-center items-center h-40 w-40" 
+            key={key}
+            >
+              <Image
+                width={256}
+                height={256}
+                key={key}
+                src={`/sponsors/${sponsor}/white.png`}
+                alt={sponsor}
+                className="w-30 object-contain"
+              />
+            </div>
           ))}
         </div>
       </div>
