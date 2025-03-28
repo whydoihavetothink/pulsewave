@@ -15,9 +15,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Tailwind Event Landing Page",
+  title: "Pulsewave",
   description:
-    "Introducing Tailwind Event Landing Page, a dynamic and visually appealing landing page template designed using Tailwind CSS and Material Tailwind.",
+    "At Pulsewave, we specialize in creating extraordinary events in some of the most unique and unexpected venues. We turn iconic spaces into unforgettable experiences.",
 };
 
 export default async function RootLayout({

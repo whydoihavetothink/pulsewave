@@ -7,10 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  RectangleStackIcon,
   UserCircleIcon,
-  CommandLineIcon,
-  Squares2X2Icon,
   XMarkIcon,
   Bars3Icon,
 } from "@heroicons/react/24/solid";
@@ -23,6 +20,7 @@ import {
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
 import { TICKETS_LINK } from "@/constants";
+import { h } from "framer-motion/dist/types.d-B50aGbjN";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -64,10 +62,12 @@ export function Navbar() {
     {
       name: t("contact"),
       icon: UserCircleIcon,
+      href: "#contact",
     },
     {
       name: t("gallery"),
       icon: IconLibraryPhoto,
+      href: "https://www.instagram.com/pulsewave_presents/",
     },
     {
       name: t("partners"),
@@ -127,7 +127,7 @@ export function Navbar() {
             }`}
           >
             {nav_menu.map(({ name, icon: Icon, href }) => (
-              <NavItem key={name} href={href}>
+              <NavItem key={name} href={href} blank={href?.startsWith("http")}>
                 <Icon className="h-5 w-5" />
                 <span>{name}</span>
               </NavItem>
@@ -171,7 +171,7 @@ export function Navbar() {
         <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-gray-900 content-center">
             {nav_menu.map(({ name, icon: Icon, href }) => (
-              <NavItem key={name} href={href}>
+              <NavItem key={name} href={href} blank={href?.startsWith("http")}>
                 <Icon className="h-5 w-5" />
                 {name}
               </NavItem>

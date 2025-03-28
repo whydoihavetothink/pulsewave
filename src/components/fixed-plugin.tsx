@@ -10,7 +10,7 @@ export function FixedPlugin() {
       <div className="!fixed bottom-4 right-4 flex gap-1 pl-2 items-center">
         <ButtonBorderMagic>
           <IconBrandInstagram width={128} height={128} className="w-5 h-5" />
-          Pulswave_Presents
+          pulsewave_presents
         </ButtonBorderMagic>
       </div>
     </a>

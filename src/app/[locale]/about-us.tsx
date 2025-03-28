@@ -24,11 +24,11 @@ export function AboutUs() {
   const t = useTranslations("About Us");
 
   return (
-    <section className="container mx-auto flex flex-col items-center px-4 py-10">
+    <section className="container mx-auto flex flex-col items-center px-7 py-10">
       <Typography
         variant="h6"
         className="text-center mb-2"
-        color="orange"
+        color={TEXT_COLOR}
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
@@ -45,7 +45,7 @@ export function AboutUs() {
       >
         {t("why us")}
       </Typography>
-      {[1,2,3,4].map((idx) => (
+      {[1, 2, 3, 4].map((idx) => (
         <Typography
           key={idx}
           variant="lead"
@@ -58,7 +58,14 @@ export function AboutUs() {
           {t(`content.${idx}`)}
         </Typography>
       ))}
-      <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
+    </section>
+  );
+}
+
+export default AboutUs;
+
+/**
+ *       <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {EVENT_INFO.map((props, idx) => (
           <AboutCard key={idx} {...props} />
         ))}
@@ -70,8 +77,5 @@ export function AboutUs() {
           />
         </div>
       </div>
-    </section>
-  );
-}
-
-export default AboutUs;
+ * 
+ */

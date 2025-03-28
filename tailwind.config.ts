@@ -15,6 +15,8 @@ const config: Config = withMT({
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+			cloudy: "#C4DADD",
+			emeraldGreen: "#102427",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

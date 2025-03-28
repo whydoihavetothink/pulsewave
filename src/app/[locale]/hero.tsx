@@ -4,7 +4,7 @@ import { IconButton, Button, Typography } from "@material-tailwind/react";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { TICKETS_LINK } from "@/constants";
+import { SECONDARY_COLOR, TICKETS_LINK } from "@/constants";
 
 function Hero() {
   const t = useTranslations("Navbar");
@@ -72,7 +72,7 @@ function Hero() {
           <div className="flex items-center gap-4">
             <a href={TICKETS_LINK} target="_blank">
               <Button
-                className="font-bold text-lg"
+                className={`font-bold text-lg bg-${SECONDARY_COLOR}`}
                 size="lg"
                 variant="filled"
                 color="white"
