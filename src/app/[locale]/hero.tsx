@@ -4,7 +4,7 @@ import { IconButton, Button, Typography } from "@material-tailwind/react";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { SECONDARY_COLOR, TICKETS_LINK } from "@/constants";
+import { SECONDARY_COLOR, SECONDARY_COLOR_RAW, TICKETS_LINK } from "@/constants";
 
 function Hero() {
   const t = useTranslations("Navbar");
@@ -21,7 +21,7 @@ function Hero() {
         className="h-full w-full object-center object-cover absolute hidden lg:block"
       >
         <source src="media/ARGY-PROMO-V3-compressed-2.mp4" type="video/mp4" />
-        <source src="media/maison.webm" type="video/webm" />
+        <source src="media/ARGY-PROMO-V3-compressed-2.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <video
@@ -33,8 +33,8 @@ function Hero() {
         poster=""
         className="h-full w-full object-center object-cover absolute block lg:hidden"
       >
-        <source src="media/maison-phone.mp4" type="video/mp4" />
-        <source src="media/maison-phone.webm" type="video/webm" />
+        <source src="media/ARGY-PROMO-V3-mobile.webm" type="video/webm" />
+        <source src="media/ARGY-PROMO-V3-mobile.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
@@ -72,10 +72,11 @@ function Hero() {
           <div className="flex items-center gap-4">
             <a href={TICKETS_LINK} target="_blank">
               <Button
-                className={`font-bold text-lg bg-${SECONDARY_COLOR}`}
+                className={`font-bold text-lg`}
                 size="lg"
                 variant="filled"
                 color="white"
+                style={{ backgroundColor: SECONDARY_COLOR_RAW }}
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
