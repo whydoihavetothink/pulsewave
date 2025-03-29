@@ -10,7 +10,7 @@ function Hero() {
   const t = useTranslations("Navbar");
 
   return (
-    <div className="relative min-h-screen w-full bg-[url('/media/Argy-banner-web.png')] bg-cover bg-no-repeat">
+    <div className="relative min-h-screen w-full bg-[url('/media/Argy-banner-web.png')] bg-cover bg-no-repeat bg-top">
       <video
         autoPlay
         loop
