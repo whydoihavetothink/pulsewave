@@ -26,16 +26,6 @@ export function AboutUs() {
   return (
     <section id="info" className="container mx-auto flex flex-col items-center px-7 py-10">
       <Typography
-        variant="h6"
-        className="text-center mb-2"
-        color={TEXT_COLOR}
-        placeholder={undefined}
-        onPointerEnterCapture={undefined}
-        onPointerLeaveCapture={undefined}
-      >
-        {t("title")}
-      </Typography>
-      <Typography
         variant="h3"
         className="text-center"
         color={TEXT_COLOR}
@@ -43,7 +33,7 @@ export function AboutUs() {
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
       >
-        {t("why us")}
+        {t("why us").toUpperCase()}
       </Typography>
       {[1, 2, 3, 4].map((idx) => (
         <Typography
