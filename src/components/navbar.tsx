@@ -19,15 +19,19 @@ import {
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
-import { SECONDARY_COLOR_RAW, TICKETS_LINK } from "@/constants";
+import {
+  PRIMARY_COLOR_RAW,
+  SECONDARY_COLOR_RAW,
+  TICKETS_LINK,
+} from "@/constants";
 import { h } from "framer-motion/dist/types.d-B50aGbjN";
+import Image from "next/image";
 
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
   blank?: boolean;
 }
-
 
 function NavItem({ children, href, blank }: NavItemProps) {
   return (
@@ -105,26 +109,25 @@ export function Navbar() {
       fullWidth
       blurred={false}
       className={`fixed top-0 z-50 border-0`}
-      style={{background: isScrolling ? "white" : "transparent"}}
+      style={{ background: isScrolling ? PRIMARY_COLOR_RAW : "transparent" }}
       placeholder={undefined}
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
     >
       <div className="flex px-4">
         <div className="container flex items-center justify-between mx-auto">
-          <Typography
-            color={isScrolling ? "blue-gray" : "white"}
-            className="text-lg font-bold"
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-          >
-            Pulsewave
-          </Typography>
+          <div className="relative w-40 h-10 overflow-hidden flex justify-center items-center">
+            <Image
+              width={1200}
+              height={1200}
+              src="/media/Pulsewave-Logo-Transparent-BG.png"
+              alt="Pulsewave"
+              className="absolute w-40 h-full object-cover"
+            />
+          </div>
           <ul
-            className={`ml-10 hidden items-center gap-6 lg:flex ${
-              isScrolling ? "text-gray-900" : "text-white"
-            }`}
+            className={`ml-10 hidden items-center gap-6 lg:flex`}
+            style={{ color: isScrolling ? SECONDARY_COLOR_RAW : "white" }}
           >
             {nav_menu.map(({ name, icon: Icon, href }) => (
               <NavItem key={name} href={href} blank={href?.startsWith("http")}>
@@ -135,8 +138,12 @@ export function Navbar() {
           </ul>
           <div className="hidden items-center gap-4 lg:flex">
             <a href={TICKETS_LINK} target="_blank">
-              <Button
-                color={isScrolling ? "gray" : "white"}
+            <Button
+              variant="outlined"
+                style={{
+                  color: SECONDARY_COLOR_RAW,
+                  borderColor: SECONDARY_COLOR_RAW,
+                }}
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
@@ -148,7 +155,7 @@ export function Navbar() {
 
           <IconButton
             variant="text"
-            color={isScrolling ? "gray" : "white"}
+            style={{ color: isScrolling ? SECONDARY_COLOR_RAW : "white" }}
             onClick={handleOpen}
             className="ml-auto inline-block lg:hidden"
             placeholder={undefined}
@@ -163,13 +170,18 @@ export function Navbar() {
           </IconButton>
         </div>
         <div className="hidden lg:flex align-middle justify-center mx-4">
-        <LanguageSwitcher dark={isScrolling}/>
+          <LanguageSwitcher dark={isScrolling} />
         </div>
       </div>
 
       <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-gray-900 content-center">
+        <div
+          className="container mx-auto mt-4 rounded-lg px-6 py-5"
+          style={{
+            backgroundColor: isScrolling ? "transparent" : PRIMARY_COLOR_RAW,
+          }}
+        >
+          <ul className="flex flex-col gap-4 text-cloudy content-center">
             {nav_menu.map(({ name, icon: Icon, href }) => (
               <NavItem key={name} href={href} blank={href?.startsWith("http")}>
                 <Icon className="h-5 w-5" />
@@ -180,7 +192,11 @@ export function Navbar() {
           <div className="mt-6 flex items-center gap-4">
             <a href={TICKETS_LINK} target="_blank">
               <Button
-                color="gray"
+              variant="outlined"
+                style={{
+                  color: SECONDARY_COLOR_RAW,
+                  borderColor: SECONDARY_COLOR_RAW,
+                }}
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
@@ -188,8 +204,7 @@ export function Navbar() {
                 {t("tickets")}
               </Button>
             </a>
-          <LanguageSwitcher dark/>
-
+            <LanguageSwitcher dark />
           </div>
         </div>
       </Collapse>

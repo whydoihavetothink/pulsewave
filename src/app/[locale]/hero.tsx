@@ -39,23 +39,13 @@ function Hero() {
       </video>
       <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
       <div className="grid min-h-screen px-8">
-        <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
-          <div className="relative w-full h-48 overflow-hidden flex justify-center items-center">
-            <Image
-              width={1200}
-              height={1200}
-              src="/media/Pulsewave-Logo-Transparent-BG.png"
-              alt="Pulsewave"
-              className="absolute w-400 h-full object-cover"
-            />
-          </div>
+        <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center" style={{ paddingTop: "14rem" }}>
             <a href={TICKETS_LINK} target="_blank">
               <Button
                 className={`font-bold text-lg`}
                 size="lg"
-                variant="filled"
-                color="white"
-                style={{ backgroundColor: SECONDARY_COLOR_RAW }}
+                variant="outlined"
+                style={{ color: SECONDARY_COLOR_RAW, borderColor: SECONDARY_COLOR_RAW }}
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}

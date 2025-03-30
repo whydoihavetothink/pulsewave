@@ -7,6 +7,7 @@ import { useLocale } from "next-intl";
 import React from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import Link from "next/link";
+import { PRIMARY_COLOR_RAW, SECONDARY_COLOR_RAW } from "@/constants";
 
 interface LanguageSwitcherProps {
   dark?: boolean;
@@ -24,21 +25,22 @@ export const LanguageSwitcher = ({ dark = false }: LanguageSwitcherProps) => {
         >
           <IconWorld
             stroke={1}
-            className={`!h-9 !w-9 ${dark ? "stroke-black" : "stroke-white"}`}
+            className={`!h-9 !w-9`}
+            style={{color: dark ? SECONDARY_COLOR_RAW : "white"}}
           />
         </Button>
       </PopoverTrigger>
 
-      <PopoverContent className="w-40 p-2 space-y-1">
-        <div className="text-md font-medium text-gray-700">Language</div>
-        <div className="border-t border-gray-200 my-1" />
+      <PopoverContent className="w-40 p-2 space-y-1 bg-emeraldGreen">
+        <div className="text-md font-medium text-cloudy">Language</div>
+        <div className="border-t border-cloudy my-1" />
 
         {locales.map((locale: string) => (
           <Link href={`/${locale}`} locale={locale} key={locale}>
             <button
               key={locale}
-              className={`w-full text-left px-2 py-1 text-sm rounded hover:bg-gray-200 ${
-                locale === current_locale ? "font-semibold text-blue-500" : ""
+              className={`w-full text-left px-2 py-1 text-sm rounded hover:bg-gray-800 ${
+                locale === current_locale ? "font-semibold text-blue-500" : "text-cloudy"
               }`}
             >
               {locale.toUpperCase()}
