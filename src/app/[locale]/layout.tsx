@@ -8,6 +8,8 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import { BACKGROUND_COLOR } from "@/constants";
 
+import { Analytics } from "@vercel/analytics/react"
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700", "900"],
@@ -48,6 +50,7 @@ export default async function RootLayout({
         <Layout>
           {children}
           <FixedPlugin />
+          <Analytics />
         </Layout>
       </NextIntlClientProvider>
         <link
