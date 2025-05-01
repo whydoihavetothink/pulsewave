@@ -39,7 +39,7 @@ export function AboutUs() {
         <Typography
           key={idx}
           variant="lead"
-          className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal"
+          className="mt-2 lg:max-w-4xl mb-8 w-full text-left font-normal"
           color={TEXT_COLOR}
           placeholder={undefined}
           onPointerEnterCapture={undefined}

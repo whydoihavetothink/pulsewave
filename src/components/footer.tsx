@@ -5,7 +5,8 @@ import { Typography, Button, IconButton } from "@material-tailwind/react";
 import { useTranslations } from "next-intl";
 
 const CURRENT_YEAR = new Date().getFullYear();
-const LINKS = ["Hieu Bui", "hbuitrung@gmail.com", "+420 777 858 223"];
+const TEXT = ["hbuitrung@gmail.com", "+420 777 858 223"];
+const LINKS = ["mailto:hbuitrung@gmail.com", "tel:+420777858223"];
 
 export function Footer() {
   const t = useTranslations("Navbar");
@@ -19,25 +20,39 @@ export function Footer() {
               id="contact"
               variant="small"
               color="white"
-              className="font-normal !text-gray-700"
+              className="font-bold !text-white"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
             >
               {t("contact")}:
             </Typography>
-            {LINKS.map((link, index) => (
+            <li>
+              <Typography
+                variant="small"
+                color="white"
+                className="font-normal !text-white"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
+              >
+                Hieu Bui
+              </Typography>
+            </li>
+            {TEXT.map((text, index) => (
               <li key={index}>
-                <Typography
-                  variant="small"
-                  color="white"
-                  className="font-normal !text-gray-700"
-                  placeholder={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
-                >
-                  {link}
-                </Typography>
+                <a href={LINKS[index]} target={"_blank"}>
+                  <Typography
+                    variant="small"
+                    color="white"
+                    className="font-normal !text-white"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                  >
+                    {text}
+                  </Typography>
+                </a>
               </li>
             ))}
           </ul>

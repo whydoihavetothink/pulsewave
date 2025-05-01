@@ -26,7 +26,6 @@ export default function Portfolio() {
       <Hero />
       <AuroraBackground showRadialGradient>
         <TracingBeam>
-          <SponsoredBy />
           <AboutUs />
           <div className="flex align-middle justify-center">
           <a href={TICKETS_LINK} target="_blank">
@@ -43,6 +42,8 @@ export default function Portfolio() {
             </a>
 
           </div>
+          <SponsoredBy />
+
           <Footer />
         </TracingBeam>
       </AuroraBackground>
