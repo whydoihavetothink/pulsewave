@@ -1,9 +1,8 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
-import AboutCard from "../../components/about-card";
-import { useTranslations } from "next-intl";
 import { TEXT_COLOR } from "@/constants";
+import { useT } from "@/lib/utils";
 
 const EVENT_INFO = [
   {
@@ -21,7 +20,7 @@ const EVENT_INFO = [
 ];
 
 export function AboutUs() {
-  const t = useTranslations("About Us");
+  const t = useT("About Us");
 
   return (
     <section id="info" className="container mx-auto flex flex-col items-center px-7 py-10">

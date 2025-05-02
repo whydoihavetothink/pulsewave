@@ -16,10 +16,12 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const brand = process.env.NEXT_PUBLIC_BRAND_NAME || "Pulsewave";
+
 export const metadata: Metadata = {
-  title: "Pulsewave",
+  title: brand,
   description:
-    "At Pulsewave, we specialize in creating extraordinary events in some of the most unique and unexpected venues. We turn iconic spaces into unforgettable experiences.",
+    `At ${brand}, we specialize in creating extraordinary events in some of the most unique and unexpected venues. We turn iconic spaces into unforgettable experiences.`,
 };
 
 export default async function RootLayout({

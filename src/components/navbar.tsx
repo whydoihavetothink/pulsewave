@@ -57,6 +57,10 @@ export function Navbar() {
   const [isScrolling, setIsScrolling] = React.useState(false);
   const t = useTranslations("Navbar");
 
+  const brandInstagram =
+    process.env.NEXT_PUBLIC_INSTAGRAM ||
+    "https://www.instagram.com/pulsewave_presents/";
+
   const nav_menu = [
     {
       name: t("info"),
@@ -71,7 +75,7 @@ export function Navbar() {
     {
       name: t("gallery"),
       icon: IconLibraryPhoto,
-      href: "https://www.instagram.com/pulsewave_presents/",
+      href: brandInstagram,
     },
     {
       name: t("partners"),
@@ -103,6 +107,9 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const instagramHandle = process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "pulsewave_presents";
+  const logoPath = `/media/${instagramHandle}-logo.png`;
+
   return (
     <MTNavbar
       shadow={false}
@@ -120,8 +127,8 @@ export function Navbar() {
             <Image
               width={1200}
               height={1200}
-              src="/media/Pulsewave-Logo-Transparent-BG.png"
-              alt="Pulsewave"
+              src={logoPath}
+              alt="logo"
               className="absolute w-40 h-full object-cover"
             />
           </div>

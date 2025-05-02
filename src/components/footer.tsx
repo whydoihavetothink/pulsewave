@@ -11,6 +11,9 @@ const LINKS = ["mailto:hbuitrung@gmail.com", "tel:+420777858223"];
 export function Footer() {
   const t = useTranslations("Navbar");
 
+  const brandInstagram = process.env.NEXT_PUBLIC_INSTAGRAM || "https://www.instagram.com/pulsewave_presents/";
+  const brand = process.env.NEXT_PUBLIC_BRAND_NAME || "Pulsewave";
+
   return (
     <footer className="pb-5 p-10 md:pt-10">
       <div className="container flex flex-col mx-auto">
@@ -58,7 +61,7 @@ export function Footer() {
           </ul>
           <div className="flex w-fit justify-center gap-2">
             <a
-              href="https://www.instagram.com/pulsewave_presents/"
+              href={brandInstagram}
               target="_blank"
             >
               <IconButton
@@ -81,7 +84,7 @@ export function Footer() {
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}
         >
-          Pulsewave &copy; {CURRENT_YEAR}
+          {brand} &copy; {CURRENT_YEAR}
         </Typography>
       </div>
     </footer>
