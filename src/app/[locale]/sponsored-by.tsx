@@ -6,16 +6,18 @@ import { useTranslations } from "next-intl";
 import { SECONDARY_COLOR } from "@/constants";
 
 const SPONSORS = [
+  "noisemaniac",
+  "kokosaburak",
   "winelife",
   "heineken",
-  "belvedere",
-  "spvg",
+  "jagermaister",
   "don_julio",
+  "spvg",
   "rtp_power",
   "1er",
   "desperado",
   "ploom",
-  "jagermaister",
+  "belvedere",
   "hedin_automotive",
   "casablanca",
 ];
