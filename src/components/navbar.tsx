@@ -109,6 +109,10 @@ export function Navbar() {
 
   const instagramHandle = process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "pulsewave_presents";
   const logoPath = `/media/${instagramHandle}-logo.png`;
+  const logoWidthDict: Record<string, string> = {
+    playordie_official: "6rem",
+    pulsewave_presents: "10rem",
+  }
 
   return (
     <MTNavbar
@@ -123,13 +127,14 @@ export function Navbar() {
     >
       <div className="flex px-4">
         <div className="container flex items-center justify-between mx-auto">
-          <div className="relative w-40 h-10 overflow-hidden flex justify-center items-center">
+          <div className="relative w-40 h-10 overflow-hidden flex justify-center items-center" 
+          style={{width: logoWidthDict[instagramHandle] || "10rem"}}>
             <Image
               width={1200}
               height={1200}
               src={logoPath}
               alt="logo"
-              className="absolute w-40 h-full object-cover"
+              className="object-cover"
             />
           </div>
           <ul
