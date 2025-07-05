@@ -20,7 +20,7 @@ const pulsewave_sponsors = [
   "ploom",
   "belvedere",
   "hedin_automotive",
-  "casablanca",
+  "casablanca"
 ];
 
 const play_or_die_sponsors = [
@@ -33,6 +33,8 @@ const play_or_die_sponsors = [
   "rtp_power",
   "desperado",
   "casablanca",
+  "rams_assets",
+  "goldfingers",
 ];
 
 const links: Record<string, string> = {
