@@ -28,7 +28,6 @@ const play_or_die_sponsors = [
   "kokosaburak",
   "winelife",
   "heineken",
-  "jagermaister",
   "spvg",
   "rtp_power",
   "desperado",
