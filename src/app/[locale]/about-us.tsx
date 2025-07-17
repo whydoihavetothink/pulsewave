@@ -1,8 +1,9 @@
 "use client";
 
-import { Typography } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import { TEXT_COLOR } from "@/constants";
 import { useT } from "@/lib/utils";
+import { useLocale } from "next-intl";
 
 const EVENT_INFO = [
   {
@@ -21,9 +22,17 @@ const EVENT_INFO = [
 
 export function AboutUs() {
   const t = useT("About Us");
+  const locale = useLocale();
+  const pdfUrl = `/media/argy-info/${locale}.pdf`;
 
   return (
     <section id="info" className="container mx-auto flex flex-col items-center px-7 py-10">
+        <a href={pdfUrl} className="text-white my-40" target="_blank">
+          <Button size="lg" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <span className="text-lg">argy-info</span>
+          </Button>
+        </a>
+
       <Typography
         variant="h3"
         className="text-center"
